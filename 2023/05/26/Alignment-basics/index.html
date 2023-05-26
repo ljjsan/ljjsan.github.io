@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Alignment basics | J.J.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Let’s explore how to align text and HTML elements using CSS. Let’s first focus on horizontal alignment. Vertical alignment is more difficult so you’ll explore that later on.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alignment basics">
+<meta property="og:url" content="https://ljjsan.github.io/2023/05/26/Alignment-basics/index.html">
+<meta property="og:site_name" content="J.J.">
+<meta property="og:description" content="Let’s explore how to align text and HTML elements using CSS. Let’s first focus on horizontal alignment. Vertical alignment is more difficult so you’ll explore that later on.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-26T07:25:35.000Z">
+<meta property="article:modified_time" content="2023-05-26T07:31:32.365Z">
+<meta property="article:author" content="J.J.">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="J.J." type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">J.J.</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ljjsan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Alignment-basics" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/26/Alignment-basics/" class="article-date">
+  <time class="dt-published" datetime="2023-05-26T07:25:35.000Z" itemprop="datePublished">05-26-2023</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Alignment basics
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Let’s explore how to align text and HTML elements using CSS.</p>
+<p>Let’s first focus on horizontal alignment. Vertical alignment is more difficult so you’ll explore that later on.</p>
+<span id="more"></span>
+
+<h2 id="Text-Alignment"><a href="#Text-Alignment" class="headerlink" title="Text Alignment"></a>Text Alignment</h2><p>Aligning text within an HTML element is very simple. To do this, you use the text-align CSS property. In the following example, the CSS rule is setting the text of all paragraph elements to be center aligned.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Text alignment can be set to left, right, center and justify.</p>
+<p>The justify alignment spreads the text out so that every line of the text has the same width.</p>
+<p>The default alignment is left for languages that are left-to-right such as English. For right-to-left languages such as Arabic, the default alignment is right.</p>
+<h2 id="HTML-Element-Alignment"><a href="#HTML-Element-Alignment" class="headerlink" title="HTML Element Alignment"></a>HTML Element Alignment</h2><p>HTML element alignment is more complicated than text alignment. To align HTML elements, you must consider the box model and document flow from previous lessons. Aligning an HTML element is done by changing the properties of its box model and how it impacts the document flow.</p>
+<h2 id="HTML-Element-Center-Alignment"><a href="#HTML-Element-Center-Alignment" class="headerlink" title="HTML Element Center Alignment"></a>HTML Element Center Alignment</h2><p>To center align an element, you set a width on the element and push its margins out to fill the remaining available space of the parent element as in the following HTML structure:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;parent&quot;</span>&gt;</span><br><span class="line">  &lt;div class=<span class="string">&quot;child&quot;</span>&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>In your CSS, you’ll set the parent element to have a red border to visualize the space it occupies:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">  border: 4px solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The child element will have a width equal to 50% of the parent element with a padding of 20 pixels. Note that padding: 20px is shorthand for setting the padding top, bottom, left and right to 20px. To visualize the space it occupies, set the border to green:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.child &#123;</span><br><span class="line">  width: 50%;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  border: 4px solid green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>To align the element to the center, set its margin property to auto. The auto will tell the browser to calculate the margin automatically based on the space available.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.child &#123;</span><br><span class="line">  width: 50%;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  border: 4px solid green;</span><br><span class="line">  margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The result is the child element is centered within the parent element:</p>
+<p>Alignment of the child in the parent element<br>It is important to note that this works because the div element is a block-level element.  </p>
+<p>If you want to align an inline element like img, you will need to change it to a block-level element. Similar to the div example, you add the img to a parent element:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;parent&quot;</span>&gt;</span><br><span class="line">  &lt;img src=<span class="string">&quot;photo.png&quot;</span> class=<span class="string">&quot;child&quot;</span>&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>The CSS rule then changes the img element to a block-level element and sets its margin to auto:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.child &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  width: 50%;</span><br><span class="line">  margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>To be more precise, in CSS you can set only the left and right margins to auto. This allows you to set the top and bottom margins to specific values if needed.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.child &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  width: 50%;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="HTML-Element-Left-x2F-Right-Alignment"><a href="#HTML-Element-Left-x2F-Right-Alignment" class="headerlink" title="HTML Element Left &#x2F; Right Alignment"></a>HTML Element Left &#x2F; Right Alignment</h2><p>The two most common ways to left and right align elements are to use the float property and the position property.</p>
+<p>The position property has several value options that impact how the element displays in the document flow. You’ll explore how to use the position property later on. For now, let’s focus on the float property.</p>
+<p>The float property sets an element’s position relative to the text content within a parent element. Text will wrap around the element.</p>
+<p>In the following example, the image will be aligned to the right of the div element. The text content will wrap around the image:</p>
+<p>HTML</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;parent&quot;</span>&gt;</span><br><span class="line">  &lt;img src=<span class="string">&quot;photo.png&quot;</span> class=<span class="string">&quot;child&quot;</span>&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu odio eget leo auctor porta sit amet sit amet justo. Donec fermentum quam <span class="keyword">in</span> diam volutpat, at lacinia diam placerat. Aenean quis feugiat sem. Suspendisse a dui massa. Phasellus scelerisque, mi vestibulum iaculis tristique, orci tellus gravida nisi, <span class="keyword">in</span> pellentesque elit massa ut lorem. Sed elementum ornare nunc vel cursus. Duis sed enim <span class="keyword">in</span> nulla efficitur convallis sed eget dolor. Curabitur scelerisque eros erat, <span class="keyword">in</span> vulputate dolor consequat vel. Praesent ac sapien condimentum, ultricies libero at, auctor orci. Curabitur ut augue ac massa convallis faucibus sed <span class="keyword">in</span> magna. Phasellus scelerisque auctor est a auctor. Nam laoreet sem sapien, porta imperdiet urna laoreet eu. Morbi dolor turpis, congue <span class="built_in">id</span> bibendum eget, viverra et risus. Quisque vitae erat <span class="built_in">id</span> tortor ullamcorper maximus.</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.child &#123;</span><br><span class="line">  <span class="built_in">float</span>: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The following displays in the web browser:  </p>
+<img src = "https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/JBGR11KmTT-RkddSpn0_WA_a961d58ec8334d8387cc2df53c9b15e1_css_float_right.png?expiry=1685232000000&hmac=_DlfFciuZk2LIAEEUWIGE7Kr5ZRJZszbGH9WxeDxDtc" alt = "">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ljjsan.github.io/2023/05/26/Alignment-basics/" data-id="cli48vvq80000esokfqznh4px" data-title="Alignment basics" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/26/Different-types-of-selectors/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Different types of selectors
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/25/Text-and-color-in-CSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Text and color in CSS</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/26/Different-types-of-selectors/">Different types of selectors</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/26/Alignment-basics/">Alignment basics</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/Text-and-color-in-CSS/">Text and color in CSS</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/Other-Internet-Protocols/">Other Internet Protocols</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/23/HTTP-Methods-HTTP-Status-Codes/">HTTP Methods &amp; HTTP Status Codes</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 J.J.<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

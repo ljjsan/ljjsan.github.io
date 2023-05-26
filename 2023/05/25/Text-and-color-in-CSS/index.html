@@ -14,7 +14,7 @@
 <meta property="og:description" content="As you design websites, you’ll be working a lot with colors and text. There are many different ways to display text and equally as many ways to define colors. This reading covers how text and color wo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-26T06:10:40.000Z">
-<meta property="article:modified_time" content="2023-05-26T06:18:27.171Z">
+<meta property="article:modified_time" content="2023-05-26T06:33:06.833Z">
 <meta property="article:author" content="J.J.">
 <meta name="twitter:card" content="summary">
   
@@ -101,7 +101,7 @@
 <p>This reading covers how text and color work in CSS.</p>
 <span id="more"></span>
 
-<h2 id="Color"><a href="#Color" class="headerlink" title="Color"></a>Color</h2><p>From CSS Version 3, there are five main ways to reference a color.</p>
+<h1 id="Color"><a href="#Color" class="headerlink" title="Color"></a>Color</h1><p>From CSS Version 3, there are five main ways to reference a color.</p>
 <p>By RGB value,</p>
 <p>By RGBA value,</p>
 <p>By HSL value,</p>
@@ -116,8 +116,12 @@
 <p>Similar to RGB, this is specified in CSS using the rgba keyword:</p>
 <h3 id="HSL-value"><a href="#HSL-value" class="headerlink" title="HSL value"></a>HSL value</h3><p>HSL is a newer color model defined as Hue (H), Saturation (S) and Lightness (L). The aim of the model is to simplify mental visualization of the color that the value represents.</p>
 <p>Think of a rainbow that has been turned into a full circle. This represents the Hue. The Hue value is the degree value on this circle, from 0 degrees to 360 degrees. 0 is red, 120 is green and 240 is blue.</p>
+<img src = "https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/6W-NFfelTF-vjRX3pXxfHw_71bfe705b84941a1b8f51eea05a848e1_text_color_hue.png?expiry=1685232000000&hmac=YPrMH6jp4-g0utc_pNo3mWn5fWwCKAdY4bzP8X_keB8" alt = "" />
+
 <p>Saturation is the distance from the center of the circle to its edge. The saturation value is represented by a percentage from 0% to 100% where 0% is the center of the circle and 100% is its edge. For example, 0% will mean that the color is more grey and 100% represents the full color.</p>
 <p>Lightness is the third element of this color model. Think of it as turning the circle into a 3D cylinder where the bottom of the cylinder is more black and toward the top is more white. Therefore, lightness is the distance from the bottom of the cylinder to the top. Again, lightness is represented by a percentage from 0% to 100% where 0% is the bottom of the cylinder and 100% is its top. In other words, 0% will mean that the color is more black and 100% is white.</p>
+<img src = "https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/EoftTRz8S7uH7U0c_Fu7KQ_ba9919ab0ef54d29bb897ce29dcd03e1_text_color_hue2.png?expiry=1685232000000&hmac=Dvwd7T_KiNBvLDHlj-i3ynw7iSaqqOB7vNz0v0f5YHw" alt = "" />
+
 <h3 id="Hex-value"><a href="#Hex-value" class="headerlink" title="Hex value"></a>Hex value</h3><p>Colors can be specified using a hexadecimal value. If you’re unfamiliar with hexadecimal, think of it as a different number set.</p>
 <p>Decimal is what you use every day. Digits range from 0 to 9 before tens and hundreds are used.</p>
 <p>Hexadecimal is similar, except it has 16 digits. This is counted as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.</p>
@@ -131,7 +135,7 @@
 <p>Some common color names available are listed below.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">black</span><br><span class="line">silver</span><br><span class="line">gray</span><br><span class="line">white</span><br><span class="line">maroon</span><br><span class="line">red</span><br><span class="line">purple</span><br><span class="line">fuchsia</span><br><span class="line">green</span><br><span class="line">lime</span><br><span class="line">olive</span><br><span class="line">yellow</span><br><span class="line">navy</span><br><span class="line">blue</span><br><span class="line">teal</span><br><span class="line">aqua</span><br></pre></td></tr></table></figure>
 
-<h2 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h2><p>With CSS there are many ways to change how text is displayed. In this section, you’ll learn the most common text manipulation CSS properties.</p>
+<h1 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h1><p>With CSS there are many ways to change how text is displayed. In this section, you’ll learn the most common text manipulation CSS properties.</p>
 <h3 id="Text-Color"><a href="#Text-Color" class="headerlink" title="Text Color"></a>Text Color</h3><p>The color property sets the color of text. The following CSS sets the text color for all paragraph elements to red.</p>
 <h3 id="Text-Font-and-Size"><a href="#Text-Font-and-Size" class="headerlink" title="Text Font and Size"></a>Text Font and Size</h3><p>There are many different fonts to display text on your computer. In simple terms, a font is a collection of text characters written in a specific style and size.</p>
 <p>If you’ve used a word processor before, you’re probably familiar with the fonts Times New Roman and Calibri.</p>
@@ -142,6 +146,8 @@
 
 
 <h3 id="Text-Transformation"><a href="#Text-Transformation" class="headerlink" title="Text Transformation"></a>Text Transformation</h3><p>Text transformation is useful if you want to ensure the correct capitalization of the text content. In the example below, the CSS rule will change all text in paragraph elements to uppercase using the text-transform property:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p &#123; </span><br><span class="line">  text-transform: uppercase;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>The most commonly used values for the text-transform property are:  uppercase,  lowercase,  capitalize  and none. The default value used is none, which means the text displays as it was written in the HTML document.</p>
 <h3 id="Text-Decoration"><a href="#Text-Decoration" class="headerlink" title="Text Decoration"></a>Text Decoration</h3><p>The text-decoration property is useful to apply additional decoration to text such as underlining and line-through (strikethrough).<br>It is possible to set the color, thickness and styling of the decoration too. In the example below, the underline will be a solid red line that is 5 pixels thick.</p>
 <p>If this is confusing, don’t worry. These properties can be individually set using the text-decoration-line, text-decoration-color, text-decoration-style and text-decoration-thickness properties. Let’s use the same example again and define it using the individual properties:</p>
@@ -162,6 +168,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2023/05/26/Alignment-basics/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Alignment basics
+        
+      </div>
+    </a>
   
   
     <a href="/2023/05/24/Other-Internet-Protocols/" id="article-nav-older" class="article-nav-link-wrap">
@@ -204,6 +219,14 @@
       <ul>
         
           <li>
+            <a href="/2023/05/26/Different-types-of-selectors/">Different types of selectors</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/26/Alignment-basics/">Alignment basics</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/25/Text-and-color-in-CSS/">Text and color in CSS</a>
           </li>
         
@@ -213,10 +236,6 @@
         
           <li>
             <a href="/2023/05/23/HTTP-Methods-HTTP-Status-Codes/">HTTP Methods &amp; HTTP Status Codes</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/23/hello-world/">Hello World</a>
           </li>
         
       </ul>
