@@ -1,8 +1,8 @@
 (function($){
   // Search
   var $searchWrap = $('#search-form-wrap'),
-    isSearchAnim = false,
-    searchAnimDuration = 200;
+      isSearchAnim = false,
+     searchAnimDuration = 200;
 
   var startSearchAnim = function(){
     isSearchAnim = true;
