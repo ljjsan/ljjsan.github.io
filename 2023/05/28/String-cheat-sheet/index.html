@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>String cheat sheet | J.J.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="By the end of this reading, you’ll be able to: Identify examples of String functions and explain how to call them In this cheat sheet, I’ll list some of the most common and most useful properties and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="String cheat sheet">
+<meta property="og:url" content="https://ljjsan.github.io/2023/05/28/String-cheat-sheet/index.html">
+<meta property="og:site_name" content="J.J.">
+<meta property="og:description" content="By the end of this reading, you’ll be able to: Identify examples of String functions and explain how to call them In this cheat sheet, I’ll list some of the most common and most useful properties and">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-29T04:56:55.000Z">
+<meta property="article:modified_time" content="2023-05-29T04:58:47.679Z">
+<meta property="article:author" content="J.J.">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="J.J." type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">J.J.</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ljjsan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-String-cheat-sheet" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/28/String-cheat-sheet/" class="article-date">
+  <time class="dt-published" datetime="2023-05-29T04:56:55.000Z" itemprop="datePublished">05-28-2023</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      String cheat sheet
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>By the end of this reading, you’ll be able to:</p>
+<p>Identify examples of String functions and explain how to call them</p>
+<p>In this cheat sheet, I’ll list some of the most common and most useful properties and methods available on strings.</p>
+<span id="more"></span>
+
+<p>For all the examples, I’ll be using either one or both of the following variables:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var greet = <span class="string">&quot;Hello, &quot;</span>;</span><br><span class="line">var place = <span class="string">&quot;World&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Note that whatever string properties and methods I demo in the following examples, I could have ran it on those strings directly, without saving them to a variable such as the ones I named greet and place.</p>
+<p>In some of the examples that follow, for the sake of clarity, instead of using a variable name, I’ll use the string itself.</p>
+<p>All strings have at their disposal several built-in properties, but there’s a single property that is really useful: the length property, which is used like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greet.length; // 7</span><br></pre></td></tr></table></figure>
+<p>To read each individual character at a specific index in a string, starting from zero, I can use the charAt() method:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greet.charAt(0); // <span class="string">&#x27;H&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>The concat() method joins two strings:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Wo&quot;</span>.concat(<span class="string">&quot;rl&quot;</span>).concat(<span class="string">&quot;d&quot;</span>); // <span class="string">&#x27;World&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>The indexOf returns the location of the first position that matches a character: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;ho-ho-ho&quot;</span>.indexOf(<span class="string">&#x27;h&#x27;</span>); // 0</span><br><span class="line"><span class="string">&quot;ho-ho-ho&quot;</span>.indexOf(<span class="string">&#x27;o&#x27;</span>); // 1</span><br><span class="line"><span class="string">&quot;ho-ho-ho&quot;</span>.indexOf(<span class="string">&#x27;-&#x27;</span>); // 2</span><br></pre></td></tr></table></figure>
+<p>The lastIndexOf finds the last match, otherwise it works the same as indexOf.</p>
+<p>The split method chops up the string into an array of sub-strings:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;ho-ho-ho&quot;</span>.<span class="built_in">split</span>(<span class="string">&quot;-&quot;</span>); // [<span class="string">&#x27;ho&#x27;</span>, <span class="string">&#x27;ho&#x27;</span>, <span class="string">&#x27;ho&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<p>There are also some methods to change the casing of strings. For example:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">greet.toUpperCase(); // <span class="string">&quot;HELLO, &quot;</span></span><br><span class="line">greet.toLowerCase(); // <span class="string">&quot;hello, &quot;</span></span><br></pre></td></tr></table></figure>
+<p>Here’s a list of all the methods covered in this cheat sheet:</p>
+<p>charAt() </p>
+<p>concat() </p>
+<p>indexOf() </p>
+<p>lastIndexOf() </p>
+<p>split() </p>
+<p>toUpperCase() </p>
+<p>toLowerCase()  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ljjsan.github.io/2023/05/28/String-cheat-sheet/" data-id="cli8dqqxx00006ookchvq1ch2" data-title="String cheat sheet" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/28/Math-object-cheat-sheet/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Math object cheat sheet</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/28/String-cheat-sheet/">String cheat sheet</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/28/Math-object-cheat-sheet/">Math object cheat sheet</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/27/Operators-in-depth/">Operators in depth</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/27/What-is-Transmission-Control-Protocol-TCP-IP/">What is Transmission Control Protocol TCP/IP?</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/26/Alternatives-to-React/">Alternatives to React</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 J.J.<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
