@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | J.J.</title>
+  <title>Math object cheat sheet | J.J.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+  <meta name="description" content="JavaScript has handy built-in objects. One of these popular built-in objects is the Math object. By the end of this reading, you’ll be able to: Outline the built-in properties and methods of the Math">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://ljjsan.github.io/2023/05/23/hello-world/index.html">
+<meta property="og:title" content="Math object cheat sheet">
+<meta property="og:url" content="https://ljjsan.github.io/2023/05/28/Math-object-cheat-sheet/index.html">
 <meta property="og:site_name" content="J.J.">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="JavaScript has handy built-in objects. One of these popular built-in objects is the Math object. By the end of this reading, you’ll be able to: Outline the built-in properties and methods of the Math">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-24T05:56:04.991Z">
-<meta property="article:modified_time" content="2023-05-24T06:37:04.167Z">
+<meta property="article:published_time" content="2023-05-29T04:40:00.000Z">
+<meta property="article:modified_time" content="2023-05-29T04:41:21.093Z">
 <meta property="article:author" content="J.J.">
 <meta name="twitter:card" content="summary">
   
@@ -75,10 +75,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Math-object-cheat-sheet" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/05/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-05-24T05:56:04.991Z" itemprop="datePublished">05-23-2023</time>
+    <a href="/2023/05/28/Math-object-cheat-sheet/" class="article-date">
+  <time class="dt-published" datetime="2023-05-29T04:40:00.000Z" itemprop="datePublished">05-28-2023</time>
 </a>
     
   </div>
@@ -89,7 +89,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      Math object cheat sheet
     </h1>
   
 
@@ -97,26 +97,33 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+        <p>JavaScript has handy built-in objects. One of these popular built-in objects is the Math object.</p>
+<p>By the end of this reading, you’ll be able to:</p>
+<p>Outline the built-in properties and methods of the Math object</p>
 <span id="more"></span>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="Number-constants"><a href="#Number-constants" class="headerlink" title="Number constants"></a>Number constants</h2><p>Here are some of the built-in number constants that exist on the Math object: </p>
+<p>The PI number: Math.PI which is approximately 3.14159</p>
+<p>The Euler’s constant: Math.E which is approximately 2.718</p>
+<p>The natural logarithm of 2: Math.LN2 which is approximately 0.693</p>
+<h2 id="Rounding-methods"><a href="#Rounding-methods" class="headerlink" title="Rounding methods"></a>Rounding methods</h2><p>These include: </p>
+<p> Math.ceil() - rounds up to the closest integer </p>
+<p> Math.floor() - rounds down to the closest integer </p>
+<p> Math.round() - rounds up to the closest integer if the decimal is .5 or above; otherwise, rounds down to the closest integer </p>
+<p> Math.trunc() - trims the decimal, leaving only the integer</p>
+<h2 id="Arithmetic-and-calculus-methods"><a href="#Arithmetic-and-calculus-methods" class="headerlink" title="Arithmetic and calculus methods"></a>Arithmetic and calculus methods</h2><p>Here is a non-conclusive list of some common arithmetic and calculus methods that exist on the Math object: </p>
+<p>Math.pow(2,3) - calculates the number 2 to the power of 3, the result is 8 </p>
+<p>Math.sqrt(16) - calculates the square root of 16, the result is 4 </p>
+<p>Math.cbrt(8) - finds the cube root of 8, the result is 2 </p>
+<p>Math.abs(-10) - returns the absolute value, the result is 10 </p>
+<p>Logarithmic methods: Math.log(), Math.log2(), Math.log10() </p>
+<p>Return the minimum and maximum values of all the inputs: Math.min(9,8,7) returns 7, Math.max(9,8,7) returns 9.</p>
+<p> Trigonometric methods: Math.sin(), Math.cos(), Math.tan(), etc.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ljjsan.github.io/2023/05/23/hello-world/" data-id="cli1aoa0r0000k4ok7zp30l1a" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ljjsan.github.io/2023/05/28/Math-object-cheat-sheet/" data-id="cli8d4am900009ookhgzc2pdc" data-title="Math object cheat sheet" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -126,15 +133,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/05/23/HTTP-Methods-HTTP-Status-Codes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          HTTP Methods &amp; HTTP Status Codes
-        
-      </div>
-    </a>
   
+    <a href="/2023/05/27/Operators-in-depth/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Operators in depth</div>
+    </a>
   
 </nav>
 
