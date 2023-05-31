@@ -14,7 +14,7 @@
 <meta property="og:description" content="In this reading, you’ll learn about some of the most common examples of data structures.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-31T08:02:11.000Z">
-<meta property="article:modified_time" content="2023-05-31T08:05:29.060Z">
+<meta property="article:modified_time" content="2023-05-31T08:39:43.296Z">
 <meta property="article:author" content="J.J.">
 <meta name="twitter:card" content="summary">
   
@@ -102,14 +102,14 @@
 
 <p>The focus will be on working with the Object, Array, Map and Set data structures in JavaScript, through a series of examples.</p>
 <p>Note that this reading will not include a discussion of some data structures that exist in some other languages, such as Queues or Linked Lists.  Although these data structures (and other data structures too!) can be custom-coded in JavaScript, the advanced nature of these topics and the difficulty with implementing related exercises means they are beyond the scope of this reading. </p>
-<p>Working with arrays in JavaScript<br>Previously, you’ve covered a lot of concepts related to how to work with JavaScript arrays.</p>
+<h2 id="Working-with-arrays-in-JavaScript"><a href="#Working-with-arrays-in-JavaScript" class="headerlink" title="Working with arrays in JavaScript"></a>Working with arrays in JavaScript</h2><p>Previously, you’ve covered a lot of concepts related to how to work with JavaScript arrays.</p>
 <p>However, there are still a few important topics that can be covered, and one of those is, for example, working with some built-in methods.</p>
 <p>In this reading, the focus is on three specific methods that exist on arrays:</p>
 <p> forEach </p>
 <p>filter</p>
 <p> map</p>
 <p> Let’s explore these methods.</p>
-<p>The forEach() method<br>Arrays in JavaScript come with a handy method that allows you to loop over each of their members. </p>
+<h3 id="The-forEach-method"><a href="#The-forEach-method" class="headerlink" title="The forEach() method"></a>The forEach() method</h3><p>Arrays in JavaScript come with a handy method that allows you to loop over each of their members. </p>
 <p>Here’s the basic syntax:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const fruits = [<span class="string">&#x27;kiwi&#x27;</span>,<span class="string">&#x27;mango&#x27;</span>,<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;pear&#x27;</span>];</span><br><span class="line"><span class="keyword">function</span> appendIndex(fruit, index) &#123;</span><br><span class="line">    console.log(`<span class="variable">$&#123;index&#125;</span>. <span class="variable">$&#123;fruit&#125;</span>`)</span><br><span class="line">&#125;</span><br><span class="line">fruits.forEach(appendIndex);</span><br></pre></td></tr></table></figure>
 <p>The result of running the above code is this:  </p>
@@ -118,13 +118,13 @@
 <p>Very often, the function that the forEach() method needs to use is passed in directly into the method call, like this:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const veggies = [<span class="string">&#x27;onion&#x27;</span>, <span class="string">&#x27;garlic&#x27;</span>, <span class="string">&#x27;potato&#x27;</span>];</span><br><span class="line">veggies.forEach( <span class="keyword">function</span>(veggie, index) &#123;</span><br><span class="line">    console.log(`<span class="variable">$&#123;index&#125;</span>. <span class="variable">$&#123;fruit&#125;</span>`);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>This makes for more compact code, but perhaps somewhat harder to read. To increase readability, sometimes arrow functions are used. You can find out more about arrow functions in the additional reading.</p>
-<p>The filter() method<br>Another very useful method on the array is the filter() method. It filters your arrays based on a specific test. Those array items that pass the test are returned.</p>
+<h3 id="The-filter-method"><a href="#The-filter-method" class="headerlink" title="The filter() method"></a>The filter() method</h3><p>Another very useful method on the array is the filter() method. It filters your arrays based on a specific test. Those array items that pass the test are returned.</p>
 <p>Here’s an example:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const nums = [0,10,20,30,40,50];</span><br><span class="line">nums.filter( <span class="keyword">function</span>(num) &#123;</span><br><span class="line">    <span class="built_in">return</span> num &gt; 20;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Here’s the returned array value:  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[30,40,50]</span><br></pre></td></tr></table></figure>
 <p>Similar to the forEach() method, the filter() method also accepts a function and that function performs some work on each of the items in the array.</p>
-<p>The map method<br>Finally, there’s a very useful map method. </p>
+<h3 id="The-map-method"><a href="#The-map-method" class="headerlink" title="The map method"></a>The map method</h3><p>Finally, there’s a very useful map method. </p>
 <p>This method is used to map each array item over to another array’s item, based on whatever work is performed inside the function that is passed-in to the map as a parameter. </p>
 <p>For example:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[0,10,20,30,40,50].map( <span class="keyword">function</span>(num) &#123;</span><br><span class="line">    <span class="built_in">return</span> num / 10</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -132,14 +132,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0,1,2,3,4,5]</span><br></pre></td></tr></table></figure>
 <p>As already discussed, choosing a proper data structure affects the very code that you can write. This is because the data structure itself comes with some built-in functionality that makes it easier to perform certain tasks or makes it harder or even impossible without converting your code to a proper data structure.</p>
 <p>Now that you’ve covered the methods, let’s explore how to work with different built-in data structures in JavaScript.</p>
-<p>Working with Objects in JavaScript<br>A lot of the information on how to work with objects in JavaScript has already been covered in this course.</p>
+<h2 id="Working-with-Objects-in-JavaScript"><a href="#Working-with-Objects-in-JavaScript" class="headerlink" title="Working with Objects in JavaScript"></a>Working with Objects in JavaScript</h2><p>A lot of the information on how to work with objects in JavaScript has already been covered in this course.</p>
 <p>The example below demonstrates how to use the object data structure to complete a specific task. This task is to convert an object to an array:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const result = [];</span><br><span class="line">const drone = &#123;</span><br><span class="line">    speed: 100,</span><br><span class="line">    color: <span class="string">&#x27;yellow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">const droneKeys = Object.keys(drone);</span><br><span class="line">droneKeys.forEach( <span class="keyword">function</span>(key) &#123;</span><br><span class="line">    result.push(key, drone[key])</span><br><span class="line">&#125;)</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure>
 <p>This is the result of executing the above code:  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;speed&#x27;</span>,100,<span class="string">&#x27;color&#x27;</span>,<span class="string">&#x27;yellow&#x27;</span>]</span><br></pre></td></tr></table></figure>
 <p>Although this is possible and works, having to do something like this might mean that you haven’t chosen the correct data structure to work with in your code.</p>
 <p>On the flip side, sometimes you don’t get to pick the data structure you’re working with. Perhaps that data comes in from a third-party data provider and all you can do is code your program so that it consumes it. You’ll learn more about the interchange of data on the web when you learn about JSON (JavaScript Object Notation).</p>
-<p>Working with Maps in JavaScript<br>To make a new Map, you can use the Map constructor:</p>
+<h2 id="Working-with-Maps-in-JavaScript"><a href="#Working-with-Maps-in-JavaScript" class="headerlink" title="Working with Maps in JavaScript"></a>Working with Maps in JavaScript</h2><p>To make a new Map, you can use the Map constructor:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new Map();</span><br></pre></td></tr></table></figure>
 <p>A map can feel very similar to an object in JS.</p>
 <p>However, it doesn’t have inheritance. No prototypes! This makes it useful as a data storage.</p>
@@ -149,7 +149,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map(3) &#123;1 =&gt; <span class="string">&#x27;The Champion&#x27;</span>, 2 =&gt; <span class="string">&#x27;The Runner-up&#x27;</span>, 3 =&gt; <span class="string">&#x27;The third place&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
 <p>To get a specific value, you need to use the get() method. For example:  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bestBoxers.get(1); // <span class="string">&#x27;The Champion&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>Working with Sets in JavaScript<br>A set is a collection of unique values.</p>
+<h2 id="Working-with-Sets-in-JavaScript"><a href="#Working-with-Sets-in-JavaScript" class="headerlink" title="Working with Sets in JavaScript"></a>Working with Sets in JavaScript</h2><p>A set is a collection of unique values.</p>
 <p>To build a new set, you can use the Set constructor:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new Set();</span><br></pre></td></tr></table></figure>
 <p>The Set constructor can, for example, accept an array.</p>
@@ -157,7 +157,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const repetitiveFruits = [<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;pear&#x27;</span>,<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;pear&#x27;</span>,<span class="string">&#x27;plum&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>];</span><br><span class="line">const uniqueFruits = new Set(repetitiveFruits);</span><br><span class="line">console.log(uniqueFruits);</span><br></pre></td></tr></table></figure>
 <p>The above code outputs the following in the console:  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;pear&#x27;</span>, <span class="string">&#x27;plum&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
-<p>Other data structures in JavaScript<br>Besides the built-in data structures in JavaScript, it’s possible to build non-native, custom data structures.</p>
+<h2 id="Other-data-structures-in-JavaScript"><a href="#Other-data-structures-in-JavaScript" class="headerlink" title="Other data structures in JavaScript"></a>Other data structures in JavaScript</h2><p>Besides the built-in data structures in JavaScript, it’s possible to build non-native, custom data structures.</p>
 <p>These data structures come built-in natively in some other programming languages  or even those other programming languages don’t support them natively.</p>
 <p>Some more advanced data structures that have not been covered include:</p>
 <p>Queues</p>
