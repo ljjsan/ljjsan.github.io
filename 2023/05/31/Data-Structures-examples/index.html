@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Data Structures examples | J.J.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this reading, you’ll learn about some of the most common examples of data structures.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Structures examples">
+<meta property="og:url" content="https://ljjsan.github.io/2023/05/31/Data-Structures-examples/index.html">
+<meta property="og:site_name" content="J.J.">
+<meta property="og:description" content="In this reading, you’ll learn about some of the most common examples of data structures.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-31T08:02:11.000Z">
+<meta property="article:modified_time" content="2023-05-31T08:05:29.060Z">
+<meta property="article:author" content="J.J.">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="J.J." type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">J.J.</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ljjsan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Data-Structures-examples" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/31/Data-Structures-examples/" class="article-date">
+  <time class="dt-published" datetime="2023-05-31T08:02:11.000Z" itemprop="datePublished">05-31-2023</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Data Structures examples
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>In this reading, you’ll learn about some of the most common examples of data structures.</p>
+<span id="more"></span>
+
+<p>The focus will be on working with the Object, Array, Map and Set data structures in JavaScript, through a series of examples.</p>
+<p>Note that this reading will not include a discussion of some data structures that exist in some other languages, such as Queues or Linked Lists.  Although these data structures (and other data structures too!) can be custom-coded in JavaScript, the advanced nature of these topics and the difficulty with implementing related exercises means they are beyond the scope of this reading. </p>
+<p>Working with arrays in JavaScript<br>Previously, you’ve covered a lot of concepts related to how to work with JavaScript arrays.</p>
+<p>However, there are still a few important topics that can be covered, and one of those is, for example, working with some built-in methods.</p>
+<p>In this reading, the focus is on three specific methods that exist on arrays:</p>
+<p> forEach </p>
+<p>filter</p>
+<p> map</p>
+<p> Let’s explore these methods.</p>
+<p>The forEach() method<br>Arrays in JavaScript come with a handy method that allows you to loop over each of their members. </p>
+<p>Here’s the basic syntax:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const fruits = [<span class="string">&#x27;kiwi&#x27;</span>,<span class="string">&#x27;mango&#x27;</span>,<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;pear&#x27;</span>];</span><br><span class="line"><span class="keyword">function</span> appendIndex(fruit, index) &#123;</span><br><span class="line">    console.log(`<span class="variable">$&#123;index&#125;</span>. <span class="variable">$&#123;fruit&#125;</span>`)</span><br><span class="line">&#125;</span><br><span class="line">fruits.forEach(appendIndex);</span><br></pre></td></tr></table></figure>
+<p>The result of running the above code is this:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0. kiwi</span><br><span class="line">1. mango</span><br><span class="line">2. apple</span><br><span class="line">3. pear</span><br></pre></td></tr></table></figure>
+<p>To explain the syntax, the forEach() method accepts a function that will work on each array item. That function’s first parameter is the current array item itself, and the second (optional) parameter is the index.</p>
+<p>Very often, the function that the forEach() method needs to use is passed in directly into the method call, like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const veggies = [<span class="string">&#x27;onion&#x27;</span>, <span class="string">&#x27;garlic&#x27;</span>, <span class="string">&#x27;potato&#x27;</span>];</span><br><span class="line">veggies.forEach( <span class="keyword">function</span>(veggie, index) &#123;</span><br><span class="line">    console.log(`<span class="variable">$&#123;index&#125;</span>. <span class="variable">$&#123;fruit&#125;</span>`);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>This makes for more compact code, but perhaps somewhat harder to read. To increase readability, sometimes arrow functions are used. You can find out more about arrow functions in the additional reading.</p>
+<p>The filter() method<br>Another very useful method on the array is the filter() method. It filters your arrays based on a specific test. Those array items that pass the test are returned.</p>
+<p>Here’s an example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const nums = [0,10,20,30,40,50];</span><br><span class="line">nums.filter( <span class="keyword">function</span>(num) &#123;</span><br><span class="line">    <span class="built_in">return</span> num &gt; 20;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Here’s the returned array value:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[30,40,50]</span><br></pre></td></tr></table></figure>
+<p>Similar to the forEach() method, the filter() method also accepts a function and that function performs some work on each of the items in the array.</p>
+<p>The map method<br>Finally, there’s a very useful map method. </p>
+<p>This method is used to map each array item over to another array’s item, based on whatever work is performed inside the function that is passed-in to the map as a parameter. </p>
+<p>For example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[0,10,20,30,40,50].map( <span class="keyword">function</span>(num) &#123;</span><br><span class="line">    <span class="built_in">return</span> num / 10</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>The return value from the above code is:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0,1,2,3,4,5]</span><br></pre></td></tr></table></figure>
+<p>As already discussed, choosing a proper data structure affects the very code that you can write. This is because the data structure itself comes with some built-in functionality that makes it easier to perform certain tasks or makes it harder or even impossible without converting your code to a proper data structure.</p>
+<p>Now that you’ve covered the methods, let’s explore how to work with different built-in data structures in JavaScript.</p>
+<p>Working with Objects in JavaScript<br>A lot of the information on how to work with objects in JavaScript has already been covered in this course.</p>
+<p>The example below demonstrates how to use the object data structure to complete a specific task. This task is to convert an object to an array:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const result = [];</span><br><span class="line">const drone = &#123;</span><br><span class="line">    speed: 100,</span><br><span class="line">    color: <span class="string">&#x27;yellow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">const droneKeys = Object.keys(drone);</span><br><span class="line">droneKeys.forEach( <span class="keyword">function</span>(key) &#123;</span><br><span class="line">    result.push(key, drone[key])</span><br><span class="line">&#125;)</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure>
+<p>This is the result of executing the above code:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;speed&#x27;</span>,100,<span class="string">&#x27;color&#x27;</span>,<span class="string">&#x27;yellow&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<p>Although this is possible and works, having to do something like this might mean that you haven’t chosen the correct data structure to work with in your code.</p>
+<p>On the flip side, sometimes you don’t get to pick the data structure you’re working with. Perhaps that data comes in from a third-party data provider and all you can do is code your program so that it consumes it. You’ll learn more about the interchange of data on the web when you learn about JSON (JavaScript Object Notation).</p>
+<p>Working with Maps in JavaScript<br>To make a new Map, you can use the Map constructor:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new Map();</span><br></pre></td></tr></table></figure>
+<p>A map can feel very similar to an object in JS.</p>
+<p>However, it doesn’t have inheritance. No prototypes! This makes it useful as a data storage.</p>
+<p>For example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> bestBoxers = new Map();</span><br><span class="line">bestBoxers.<span class="built_in">set</span>(1, <span class="string">&quot;The Champion&quot;</span>);</span><br><span class="line">bestBoxers.<span class="built_in">set</span>(2, <span class="string">&quot;The Runner-up&quot;</span>);</span><br><span class="line">bestBoxers.<span class="built_in">set</span>(3, <span class="string">&quot;The third place&quot;</span>);</span><br><span class="line"></span><br><span class="line">console.log(bestBoxers);</span><br></pre></td></tr></table></figure>
+<p>Here’s the console output:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map(3) &#123;1 =&gt; <span class="string">&#x27;The Champion&#x27;</span>, 2 =&gt; <span class="string">&#x27;The Runner-up&#x27;</span>, 3 =&gt; <span class="string">&#x27;The third place&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>To get a specific value, you need to use the get() method. For example:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bestBoxers.get(1); // <span class="string">&#x27;The Champion&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>Working with Sets in JavaScript<br>A set is a collection of unique values.</p>
+<p>To build a new set, you can use the Set constructor:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new Set();</span><br></pre></td></tr></table></figure>
+<p>The Set constructor can, for example, accept an array.</p>
+<p>This means that we can use it to quickly filter an array for unique members.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const repetitiveFruits = [<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;pear&#x27;</span>,<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;pear&#x27;</span>,<span class="string">&#x27;plum&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>];</span><br><span class="line">const uniqueFruits = new Set(repetitiveFruits);</span><br><span class="line">console.log(uniqueFruits);</span><br></pre></td></tr></table></figure>
+<p>The above code outputs the following in the console:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;pear&#x27;</span>, <span class="string">&#x27;plum&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>Other data structures in JavaScript<br>Besides the built-in data structures in JavaScript, it’s possible to build non-native, custom data structures.</p>
+<p>These data structures come built-in natively in some other programming languages  or even those other programming languages don’t support them natively.</p>
+<p>Some more advanced data structures that have not been covered include:</p>
+<p>Queues</p>
+<p>Linked lists (singly-linked and doubly-linked)</p>
+<p>Trees</p>
+<p>Graphs</p>
+<p>For resources on building these data structures, please refer to the additional reading.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ljjsan.github.io/2023/05/31/Data-Structures-examples/" data-id="clibfap6l0000zgokd9zr9smt" data-title="Data Structures examples" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/29/Object-Oriented-Programming-principles/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Object Oriented Programming principles</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/31/Data-Structures-examples/">Data Structures examples</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/29/Object-Oriented-Programming-principles/">Object Oriented Programming principles</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/29/Introduction-to-Functional-Programming-JavaScript-Paradigms/">Introduction to Functional Programming: JavaScript Paradigms</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/28/String-cheat-sheet/">String cheat sheet</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/28/Math-object-cheat-sheet/">Math object cheat sheet</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 J.J.<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
